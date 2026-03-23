@@ -7,8 +7,8 @@ import java.nio.file.attribute.BasicFileAttributes;
 class ListJavaFiles extends SimpleFileVisitor<Path> {
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs){
-        if (file.toString().endsWith(".java")) {
-            System.out.println(file.getFileName());
+        if (file.toString().endsWith(".java") ||file.toString().endsWith(".class")) {
+           // matches(path)
         }
 //        System.out.println(file.getFileName());
         return FileVisitResult.CONTINUE;
@@ -17,7 +17,7 @@ class ListJavaFiles extends SimpleFileVisitor<Path> {
 
 public class SimpleFileVisitorTest01 {
     public static void main(String[] args) throws IOException {
-        Path root = Paths.get(".");
-        Files.walkFileTree(root, new ListJavaFiles());
+        //Path root = Paths.get(".");
+        //Files.walkFileTree(root, new ListJavaFiles());
     }
 }

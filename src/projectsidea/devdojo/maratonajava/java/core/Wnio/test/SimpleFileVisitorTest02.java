@@ -33,6 +33,5 @@ public class SimpleFileVisitorTest02 {
     public static void main(String[] args) throws IOException {
         Path root = Paths.get("teste");
         Files.walkFileTree(root, new ListAllFiles());
-        System.out.println("teste");
     }
 }
