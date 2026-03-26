@@ -2,23 +2,13 @@ package projectsidea.devdojo.maratonajava.java.core.Ycolecoes.test;
 
 import projectsidea.devdojo.maratonajava.java.core.Ycolecoes.dominio.Manga;
 
-import java.time.Duration;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-class MangaByIdComparator implements Comparator<Manga>{
-    @Override
-    public int compare(Manga manga1, Manga manga2) {
-        return manga1.getId().compareTo(manga2.getId());
-    }
-}
-
-public class MangaSortTest01 {
-    public static void main(String[] args){
-
+public class BinartSearchTest02 {
+    public static void main(String[] args) {
+        MangaByIdComparator mangaByIdComparator = new MangaByIdComparator();
         List<Manga> mangas = new ArrayList<>();
         mangas.add(new Manga(5L,"Attack on Titan",25.8));
         mangas.add(new Manga(1L,"Berserk",40));
@@ -26,23 +16,16 @@ public class MangaSortTest01 {
         mangas.add(new Manga(4L,"Dragon Ball",12.9));
         mangas.add(new Manga(3L,"eshaFights",7.5));
 
+        //Collections.sort(mangas);
 
-        Collections.sort(mangas);
-
-        for (Manga manga : mangas) {
-            System.out.println(manga);
-        }
-
-        Collections.sort(mangas,new MangaByIdComparator());
-        System.out.println("--------");
+        mangas.sort(mangaByIdComparator);
 
         for (Manga manga : mangas) {
             System.out.println(manga);
         }
 
+        Manga mangaToSearch = new Manga(3L, "eshaFights", 7.5);
 
-
-
-
+        System.out.println(Collections.binarySearch(mangas,mangaToSearch,mangaByIdComparator));
     }
 }
