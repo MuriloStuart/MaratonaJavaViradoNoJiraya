@@ -21,18 +21,18 @@ public class Manga implements Comparable<Manga> {
         this.quantidade = quantidade;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Manga manga = (Manga) o;
-        return Double.compare(precoManga, manga.precoManga) == 0 && Objects.equals(id, manga.id) && Objects.equals(nomeManga, manga.nomeManga);
+        return Objects.equals(id, manga.id) && Objects.equals(nomeManga, manga.nomeManga);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nomeManga, precoManga);
+        return Objects.hash(id, nomeManga);
     }
-
 
     @Override
     public String toString() {

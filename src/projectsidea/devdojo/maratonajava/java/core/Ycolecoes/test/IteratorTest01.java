@@ -3,7 +3,6 @@ package projectsidea.devdojo.maratonajava.java.core.Ycolecoes.test;
 import projectsidea.devdojo.maratonajava.java.core.Ycolecoes.dominio.Manga;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class IteratorTest01 {
@@ -15,15 +14,16 @@ public class IteratorTest01 {
         mangas.add(new Manga(4L,"Dragon Ball",12.9,2));
         mangas.add(new Manga(3L,"eshaFights",7.5,0));
 
-//        Iterator<Manga> mangaIterator = mangas.iterator();
-//
-//        while (mangaIterator.hasNext()) {
-//            Manga manga = mangaIterator.next();
-//            if (manga.getQuantidade() == 0){
-//                mangaIterator.remove();
-//            }
-//        }
-//
+/* teste
+        Iterator<Manga> mangaIterator = mangas.iterator();
+        while (mangaIterator.hasNext()) {
+            Manga manga = mangaIterator.next();
+            if (manga.getQuantidade() == 0){
+                mangaIterator.remove();
+            }
+        }
+
+*/
         mangas.removeIf(manga -> manga.getQuantidade() == 0);
 
         for (Manga manga : mangas) {
