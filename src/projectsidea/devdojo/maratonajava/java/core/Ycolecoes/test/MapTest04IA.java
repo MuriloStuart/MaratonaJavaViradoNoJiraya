@@ -8,13 +8,12 @@ public class MapTest04IA {
         String frase = "java é legal e java é rápido";
         String[] palavras = frase.split(" ");
         Map<String, Integer> map = new HashMap<>();
+        for (String palavra : palavras) {
+            map.putIfAbsent(palavra, 0);
+            map.put(palavra, map.get(palavra) + 1);
+        }
 
-        Map<String, Integer> map2 = new HashMap<>();
-        map2.put("Ana", 25);
-        map2.put("Ana", 30);
-        System.out.println(map2.get("Ana"));
-
-
+        System.out.println(map);
 
 
     }

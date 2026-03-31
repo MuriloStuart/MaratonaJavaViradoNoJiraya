@@ -19,7 +19,6 @@ public class MapTest02 {
 
         Map<Consumidor,Manga> consumidorMangaHashMap = new HashMap<>();
         consumidorMangaHashMap.put(consumidor1,manga1);
-        consumidorMangaHashMap.put(consumidor1,manga1);
         consumidorMangaHashMap.put(consumidor2,manga4);
         for (Map.Entry<Consumidor, Manga> entry : consumidorMangaHashMap.entrySet()) {
             System.out.println(entry.getKey().getNome() + " - " + entry.getValue().getNomeManga());
