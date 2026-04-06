@@ -1,9 +1,7 @@
 package projectsidea.devdojo.maratonajava.java.core.Zgenericis.test;
 
 import projectsidea.devdojo.maratonajava.java.core.Zgenericis.Service.BarcoRentavelService;
-import projectsidea.devdojo.maratonajava.java.core.Zgenericis.Service.CarroRentavelService;
 import projectsidea.devdojo.maratonajava.java.core.Zgenericis.dominio.Barco;
-import projectsidea.devdojo.maratonajava.java.core.Zgenericis.dominio.Carro;
 
 public class ClasseGenericaTest02 {
     public static void main(String[] args) {
