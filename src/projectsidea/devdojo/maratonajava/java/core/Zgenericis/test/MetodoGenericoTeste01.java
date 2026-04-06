@@ -1,9 +1,7 @@
 package projectsidea.devdojo.maratonajava.java.core.Zgenericis.test;
 
-import projectsidea.devdojo.maratonajava.java.core.Jmodificadorfinal.Dominio.Carro;
 import projectsidea.devdojo.maratonajava.java.core.Zgenericis.dominio.Barco;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MetodoGenericoTeste01 {
