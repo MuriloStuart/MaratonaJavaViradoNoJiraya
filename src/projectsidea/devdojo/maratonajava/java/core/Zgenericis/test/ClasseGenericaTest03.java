@@ -1,6 +1,5 @@
 package projectsidea.devdojo.maratonajava.java.core.Zgenericis.test;
 
-import projectsidea.devdojo.maratonajava.java.core.Zgenericis.Service.BarcoRentavelService;
 import projectsidea.devdojo.maratonajava.java.core.Zgenericis.Service.RentalService;
 import projectsidea.devdojo.maratonajava.java.core.Zgenericis.dominio.Barco;
 import projectsidea.devdojo.maratonajava.java.core.Zgenericis.dominio.Carro;
