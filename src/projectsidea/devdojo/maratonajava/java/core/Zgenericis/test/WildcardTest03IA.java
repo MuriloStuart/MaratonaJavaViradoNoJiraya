@@ -5,9 +5,9 @@ package projectsidea.devdojo.maratonajava.java.core.Zgenericis.test;
 public class WildcardTest03IA {
     public static void main(String[] args) {
         String nome1 = "Java";
-        String nome2 = "Java";
+        String nome2 = "AArahon";
         int numero1 = 5;
-        int numero2 = 80;
+        int numero2 = 800;
 
         System.out.println(maior(numero1, numero2));
         System.out.println(maior(nome1, nome2));
