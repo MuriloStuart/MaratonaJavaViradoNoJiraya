@@ -1,7 +1,10 @@
 package projectsidea.devdojo.maratonajava.java.core.ZZDoptional.test;
 
 import projectsidea.devdojo.maratonajava.java.core.ZZDoptional.Repositorio.MangaRepository;
+import projectsidea.devdojo.maratonajava.java.core.ZZDoptional.Repositorio.ProdutoRepository;
 import projectsidea.devdojo.maratonajava.java.core.ZZDoptional.domain.Manga;
+import projectsidea.devdojo.maratonajava.java.core.ZZDoptional.domain.Produto;
+import projectsidea.devdojo.maratonajava.java.core.ZZDoptional.domain.Usuario;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,22 +52,48 @@ public class OptionalTest03IADesafios {
 //        buscarEmailValido(strings);
 
 //        Exercicio3
+//        List<Usuario> usuarios = List.of(
+//                new Usuario("Murilo", "stuartmurilo10@gmail.com"),
+//                new Usuario("João", "joao@gmail.com"),
+//                new Usuario("Carla", "carla@gmail.com"),
+//                new Usuario("Ana Gabriela vulgo comivel", "ana@gmail.com"),
+//                new Usuario(null, null)
+//                );
+//
+//        Optional<Usuario> usuarioOptional = Optional.ofNullable(usuarios.get(4));
+//        System.out.println(retornaEmailMaisculo(usuarioOptional));
+
+//        Exercicio 4
+//       Produto produtoById = ProdutoRepository.findByid("5")
+//                .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado"));
+//
+//        Produto produtoByName = ProdutoRepository.findByName("Xbox")
+//                .orElseThrow(() -> new IllegalArgumentException("Produto não encontrado"));
+//
+//       // System.out.println(produtoById);
+//        System.out.println(produtoByName);
+
 
 
     }
+
+
+    private static String retornaEmailMaisculo(Optional<Usuario> usuario) {
+        return usuario.map(Usuario::getEmail).map(String::toUpperCase).orElse("Usuario Não Encontrado");
+    }
+
 
     private static void buscarEmailValido(List<String> strings) {
-      for (String email : strings) {
-          Optional.ofNullable(email).ifPresentOrElse(System.out::println,()-> System.out.println("Email invalido"));
-      }
+        for (String email : strings) {
+            Optional.ofNullable(email).ifPresentOrElse(System.out::println, () -> System.out.println("Email invalido"));
+        }
     }
-
 
 
     private static Optional<String> buscarNome(String nome) {
-         if (nome == null || nome.isEmpty()) {
-             return Optional.empty();
-         }
+        if (nome == null || nome.isEmpty()) {
+            return Optional.empty();
+        }
         return Optional.of(nome);
     }
 }

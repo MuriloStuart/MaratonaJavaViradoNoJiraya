@@ -20,5 +20,6 @@ public class OptionalTest02 {
 
         System.out.println(manga);
 
+
     }
 }
