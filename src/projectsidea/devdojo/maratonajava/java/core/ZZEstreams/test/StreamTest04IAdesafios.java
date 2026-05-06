@@ -35,11 +35,22 @@ public class StreamTest04IAdesafios {
 //        System.out.println(nomesComA);
 
 //        exercicio 2
-        List<Integer> numeros = new ArrayList<>(List.of(1, 2, 3, 4, 5));
-        List<Integer> numerosElevadosAoQuadrado = numeros.stream()
-                .map(i -> i * i)
-                .collect(Collectors.toList());
+//        List<Integer> numeros = new ArrayList<>(List.of(1, 2, 3, 4, 5));
+//        List<Integer> numerosElevadosAoQuadrado = numeros.stream()
+//                .map(i -> i * i)
+//                .collect(Collectors.toList());
+//
+//        System.out.println(numerosElevadosAoQuadrado);
 
-        System.out.println(numerosElevadosAoQuadrado);
+//        exercico 3
+
+        List<Integer> numeros = new ArrayList<>(List.of(10, 25, 3, 47, 8, 99, 12));
+        long numerosMaioresQue20 = numeros.stream()
+                .filter(ln -> ln >= 10)
+                .count();
+
+        System.out.println(numerosMaioresQue20);
+
+
     }
 }
