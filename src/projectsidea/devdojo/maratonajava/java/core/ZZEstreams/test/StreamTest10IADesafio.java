@@ -60,9 +60,9 @@ public class StreamTest10IADesafio {
 //                .forEach(System.out::println);
 
         //EX5
-        Stream.iterate(1, i -> i + 1)
-                .limit(6)
-                .reduce((a, b) -> a * b).ifPresent(System.out::println);
+//        Stream.iterate(1, i -> i + 1)
+//                .limit(6)
+//                .reduce((a, b) -> a * b).ifPresent(System.out::println);
 
 
     }
