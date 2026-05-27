@@ -30,6 +30,9 @@ package projectsidea.devdojo.maratonajava.java.core.ZZEstreams.test;
 //Resultado esperado:
 //        6! = 720
 
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
 
 public class StreamTest10IADesafio {
@@ -39,6 +42,28 @@ public class StreamTest10IADesafio {
 //                .reduce(Integer::sum).ifPresentOrElse(System.out::println, () -> System.out.println("não tem"));
 
         //EX2
+//        ThreadLocalRandom random = ThreadLocalRandom.current();
+//
+//        Stream.generate(() -> random.nextInt(1,100) )
+//                .limit(8)
+//                .forEach(System.out::println);
+
+//      EX3
+//        List<Integer> numeros = List.of(3, 17, 8, 42, 5, 99, 23);
+//               numeros.stream()
+//                .reduce((a, b) -> a > b ? a : b).ifPresent(System.out::println);
+
+        //EX4
+//        Stream.iterate(new int[]{0, 1}, n -> new int[]{n[1], n[0] + n[1]})
+//                .limit(8)
+//                .map(n -> n[0])
+//                .forEach(System.out::println);
+
+        //EX5
+        Stream.iterate(1, i -> i + 1)
+                .limit(6)
+                .reduce((a, b) -> a * b).ifPresent(System.out::println);
+
 
     }
 }
