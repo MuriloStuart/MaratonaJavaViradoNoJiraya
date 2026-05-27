@@ -2,14 +2,13 @@ package projectsidea.devdojo.maratonajava.java.core.ZZEstreams.test;
 
 import projectsidea.devdojo.maratonajava.java.core.ZZEstreams.dominio.Category;
 import projectsidea.devdojo.maratonajava.java.core.ZZEstreams.dominio.LightNovel;
-import projectsidea.devdojo.maratonajava.java.core.ZZEstreams.dominio.Promotion;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
 
-public class StreamTest114 {
+public class StreamTest14 {
     private static List<LightNovel> lightNovels = new ArrayList<>(List.of(
             new LightNovel("Naruto", 1, Category.FANTASY),
             new LightNovel("HxH", 7.5,Category.FANTASY) ,
