@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
 
-public class StreamTest14 {
+public class StreamTest15 {
     private static final List<LightNovel> lightNovels = new ArrayList<>(List.of(
             new LightNovel("Naruto", 1, Category.FANTASY),
             new LightNovel("HxH", 7.5,Category.FANTASY) ,
@@ -24,18 +24,10 @@ public class StreamTest14 {
     ));
 
     public static void main(String[] args) {
-        Map<Category, Long> collect = lightNovels.stream().collect(groupingBy(LightNovel::getCategory, Collectors.counting()));
+        Map<Category, DoubleSummaryStatistics> collect = lightNovels.stream()
+                .collect(groupingBy(LightNovel::getCategory, Collectors.summarizingDouble(LightNovel::getPrice)));
         System.out.println(collect);
 
-        Map<Category, Optional<LightNovel>> collect1 = lightNovels.stream()
-                .collect(groupingBy(LightNovel::getCategory, Collectors.maxBy(Comparator.comparing(LightNovel::getPrice))));
-        System.out.println(collect1);
-
-        Map<Category, LightNovel> collect2 = lightNovels.stream().collect(groupingBy(LightNovel::getCategory
-                , Collectors.collectingAndThen(Collectors.maxBy(Comparator.comparing(LightNovel::getPrice)), Optional::get)));
-        System.out.println(collect2);
-
-        Map<Category, LightNovel> collect3 = lightNovels.stream().collect(Collectors.toMap(LightNovel::getCategory, Function.identity(), BinaryOperator.maxBy(Comparator.comparing(LightNovel::getPrice))));
-        System.out.println(collect3);
+        lightNovels.stream().collect(Collectors.groupingBy(LightNovel::getCategory));
     }
 }
